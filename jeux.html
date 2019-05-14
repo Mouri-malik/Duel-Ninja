@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <title>Duel Ninja</title>
+</head>
+
+<body>
+  <section id="container">
+    <div class="info_adversaire">
+
+      <div class="div-elmt-adversaire">
+        <span id="element_adversaireTxt"></span>
+        <img src="image/logo-interrogation.png" class="elmt-adversaire" alt="" id="element_adversaire">
+      </div>
+
+        <div class="div-img-adversaire">
+          <img src="image/kakashi-mask.png" class="img-adversaire" alt="" id="img_adversaire">
+          <h1 id="pseudo_adversaire">?????</h1>
+        </div>
+
+      <div class="div-icon-adversaire">
+        <div class="infoBarA">
+          <label id="vie_adversaire" for="barlifeA"><p id="textVie"></p> <img src="image/vie.png" alt="">
+            <progress id="barlifeA" max="100" value=""> </progress>
+          </label>
+        </div>
+        <div class="infoBarA">
+          <label id="chakra_adversaire" for="barChakraA"><p id="textChakra"></p><img src="image/chakra.png" alt="">
+            <progress id="barChakraA" max="500" value=""> </progress>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="info_joueur">
+      <div class="div-attaque">
+        <div class="attaque">
+          <span id="element_joueurTxt"></span>
+          <a href="#" id="attaque"><img src="image/attaquesimple.png" class="attaque" alt=""></a>
+        </div>
+        <div class="attaqueIntermediaire">
+          <span>Sonne l'adversaire. Demande 100pts de chakra. Utilisable <span id="nbAttsup">  </span>  </span>
+          <a href="#" id="attaqueIntermediaire"> <img src="image/attaquesecondaire.png" class="attaque" alt="" id="imgAttSup"></a>
+        </div>
+        <div class="attaqueSpecial">
+          <span>Attaque puissante. Demande 250pts de chakra. Utilisable  <span id="nbAttspe">  </span></span>
+          <a href="#" id="attaqueSpecial"> <img src="image/attaquespéciale.png" class="attaque" alt="" id="imgAttSpe"></a>
+        </div>
+        <p id="tour"></p>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!--Container du bas-->
+  <section id="container2">
+    <div class="console" id="interaction">
+      <img src="image/shuriken.png" alt="">
+    </div>
+
+    <div class="joueur">
+
+      <div class="div-icons">
+        <div class="div-observer">
+          <span>Observer</span>
+          <a href="#" id="observer"> <img src="image/observer2.png" class="icon-perso" alt=""></a>
+        </div>
+        <div class="div-soins">
+          <span>Se soigner</span>
+          <a href="#" id="soigner"> <img src="image/soins2.png" class="icon-perso" alt=""></a>
+        </div>
+        <div class="div-chakra">
+          <span>Charger chakra</span>
+          <a href="#" id="charger_chakra"><img src="image/charge_chakra2.png" class="icon-perso" alt=""></a>
+        </div>
+      </div>
+
+
+      <div class="sante_chakra">
+
+        <label id="label_coeur" for="barlifeJ">
+          <p id="vie_joueur"></p><img src="image/vie.png" class="life" alt="">
+          <progress id="barlifeJ" max="100" value=""> </progress>
+        </label>
+
+        <label id="" for="barChakraj">
+          <p id="chakra_joueur"> </p><img src="image/chakra.png" class="life" alt="">
+          <progress id="barChakraJ" max="500" value=""> </progress>
+        </label>
+
+      </div>
+      <img src="image/personnage1.png" class="img_joueur" alt="" id="imageJoueur">
+      <div class="div-elmt">
+        <span>Votre élément</span>
+        <img src="image/feu.png" alt="" id="element_joueur">
+      </div>
+    </div>
+
+
+  </section>
+
+  <section id="containerFin">
+  </section>
+
+
+  <script type="text/javascript" src="js-shinobi/script2.js"></script>
+
+</body>
+
+</html>

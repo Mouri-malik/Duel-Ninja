@@ -1,0 +1,29 @@
+body {
+  background-image: url(image/fond-accueil.jpg);
+  font-family: 'courier', monospace;
+}
+
+.container {
+  margin: auto;
+}
+
+h1 {
+  border-style: groove;
+  text-align: center;
+}
+
+.div_regles_icons .regles_icons {
+  width: 100%;
+}
+
+.div_regles_elmt .regles_elmt {
+  max-width: 50%;
+}
+
+.div_regles_attaques .regles_attaques {
+  width: 69%;
+}
+
+.img-fleche{
+  width:130px
+}

@@ -1,0 +1,548 @@
+body {
+  background-size: cover;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  background-repeat: repeat;
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+
+    /* When the animation is finished, start again */
+    animation-iteration-count: 0;
+}
+
+
+#container {
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info_adversaire {
+  width: 60%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.info_adversaire #pseudo_adversaire {
+  margin: 0;
+  color: #fff;
+  border: 2px solid black;
+  text-shadow: 2px 2px black;
+  padding:5px;
+  background-color:  rgba(0,0,0,0.8);/*Fond transparent*/
+}
+
+
+.info_adversaire .div-icon-adversaire {
+  display: flex;
+  flex-direction: column;
+  width: 27%;
+  align-items: center;
+  margin-left: 80px;
+}
+
+.div-elmt-adversaire {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+.div-elmt-adversaire .elmt-adversaire {
+  width: 70px;
+  display: flex;
+}
+
+.div-elmt-adversaire span {
+  display: none;
+  position: absolute;
+  color: #fff;
+  background: #069;
+  font-size: 20px;
+  transition: all .5s;
+}
+
+.div-elmt-adversaire:hover span {
+  left: 2em;
+  display: block;
+  left: 5%;
+}
+
+.div-adversaire-tour {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.div-adversaire-tour .info_tour #tour {
+  display: flex;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px black
+}
+
+.info_tour {
+  display: flex;
+  align-items: flex-end;
+}
+
+.div-img-adversaire {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 50%;
+  height: 196px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.div-img-adversaire .img-adversaire {
+  width: 170px;
+}
+
+.div-icon-adversaire p {
+ font-size: 15px;
+display: flex;
+align-items: start;
+margin: auto;
+color: #fff;
+position: absolute;
+left: 138px;
+}
+
+.div-icon-adversaire img {
+  width: 30px;
+}
+
+.div-icon-adversaire {
+  margin-left: 100px;
+  margin-top: 0px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  color: white;
+}
+
+.info_joueur {
+  width: 22%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  height: 50%;
+}
+
+.div-elmt span {
+  display: none;
+  position: absolute;
+  color: #fff;
+  background: #069;
+  font-size: 20px;
+  transition: all .5s;
+}
+
+.div-elmt:hover span {
+  left: 2em;
+  display: block;
+  left: 60%;
+}
+
+.div-elmt #element_joueur {
+  /*élément du joueur*/
+  width: 70px;
+  display: flex;
+  right: 0
+}
+
+.info_joueur .div-attaque {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-right: 30px;
+  max-width: 100%;
+}
+
+.info_joueur .attaque {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  max-width: 100%;
+}
+
+.joueur {
+  display: flex;
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.div-icons {
+  /*Div des 3 icons :observer, chakra et soins*/
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+.div-icons .icon-perso {
+  width: 70px;
+  margin-top: 20px;
+}
+
+/*-----DIV ICON OBSERVER*/
+.div-observer span {
+  display: none;
+  position: absolute;
+  /* positionnement hors flux */
+  left: -10%;
+  /* décalage à gauche toute */
+  padding: 0 .25em;
+  /* un peu d'espace latéral */
+  color: #fff;
+  /* couleur du texte à ajuster suivant le besoin */
+  background: #069;
+  /* couleur du fond à ajuster suivant le besoin */
+  font-size: 20px;
+  /* la transition à appliquer */
+}
+
+.div-observer:hover span {
+  left: 2em;
+  display: block;
+  left: 0;
+}
+
+/*-------DIV ICON SE SOIGNER*/
+.div-soins span {
+  display: none;
+  position: absolute;
+  /* positionnement hors flux */
+  left: -10%;
+  /* décalage à gauche toute */
+  padding: 0 .25em;
+  /* un peu d'espace latéral */
+  color: #fff;
+  /* couleur du texte à ajuster suivant le besoin */
+  background: #069;
+  /* couleur du fond à ajuster suivant le besoin */
+  font-size: 20px;
+  transition: all .5s;
+  /* la transition à appliquer */
+}
+
+.div-soins:hover span {
+  left: 2em;
+  display: block;
+  left: 0%;
+}
+
+/*-------DIV ICON CHARGER CHAKRA*/
+.div-chakra span {
+  display: none;
+  position: absolute;
+  /* positionnement hors flux */
+  left: -10%;
+  /* décalage à gauche toute */
+  padding: 0 .25em;
+  /* un peu d'espace latéral */
+  color: #fff;
+  /* couleur du texte à ajuster suivant le besoin */
+  background: #069;
+  /* couleur du fond à ajuster suivant le besoin */
+  font-size: 20px;
+  transition: all .5s;
+  /* la transition à appliquer */
+}
+
+.div-chakra:hover span {
+  left: 2em;
+  display: block;
+  left: 0%;
+}
+
+.attaque span {
+  display: none;
+  position: absolute;
+  /* positionnement hors flux */
+  left: -10%;
+  /* décalage à gauche toute */
+  padding: 0 .25em;
+  /* un peu d'espace latéral */
+  color: #fff;
+  /* couleur du texte à ajuster suivant le besoin */
+  background: #069;
+  /* couleur du fond à ajuster suivant le besoin */
+  font-size: 20px;
+  transition: all .5s;
+  /* la transition à appliquer */
+}
+
+.attaque:hover span {
+  left: 2em;
+  display: block;
+  left: 60%;
+}
+
+.attaqueIntermediaire span {
+  display: none;
+  position: absolute;
+  /* un peu d'espace latéral */
+  color: #fff;
+  background: #069;
+  font-size: 20px;
+  transition: all .5s;
+}
+
+.attaqueIntermediaire:hover span {
+  left: 2em;
+  display: block;
+  left: 40%;
+}
+
+.attaqueSpecial span {
+  display: none;
+  position: absolute;
+  /* positionnement hors flux */
+  left: -10%;
+  /* décalage à gauche toute */
+  padding: 0 .25em;
+  /* un peu d'espace latéral */
+  color: #fff;
+  /* couleur du texte à ajuster suivant le besoin */
+  background: #069;
+  /* couleur du fond à ajuster suivant le besoin */
+  font-size: 20px;
+  transition: all .5s;
+  /* la transition à appliquer */
+}
+
+.attaqueSpecial:hover span {
+  left: 2em;
+  display: block;
+  left: 36%;
+}
+
+.joueur .life {
+  /*vie et chakra du joueur*/
+  width: 30px;
+}
+
+.joueur .img_joueur {
+  height: 380px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.joueur .sante_chakra {
+  /*div de la vie et du chakra du joueur*/
+  bottom: 20px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 35%
+}
+
+.sante_chakra #chakra_joueur {
+  margin: 0;
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+
+.sante_chakra #vie_joueur {
+  margin: 0;
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+
+label {
+  width: 100%;
+  margin-top: 25px;
+  align-items: start;
+  display: flex;
+  justify-content: space-between ;
+}
+
+#container2 .joueur p {
+
+}
+
+.console {
+  width: 45%;
+  height: 25%;
+  background-color: #000000;
+  opacity: 0.8;
+  /*fond dégradé*/
+  border-top-style: ridge;
+  border-right-style: ridge;
+  position: fixed;
+  left: 0;
+  bottom: 0
+}
+
+.console p {
+  margin: 20px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.console img {
+  position: absolute;
+  width: 80px;
+  right: -35px;
+  top: -45px
+}
+
+#containerFin {
+  display: none;
+  text-align: center;
+  margin-top: 128px;
+}
+
+#rejouerFin {
+  width: 100%;
+  height: 60px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%;
+  color: white;
+}
+
+.infoBarA {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+/* width: 201px; */
+ width: 100%;
+}
+
+#barlifeA {
+  display: none;
+  -webkit-appearance: none;
+}
+
+#barlifeA::-webkit-progress-value {
+  background-color: #00e676;
+  border-radius: 2px;
+}
+
+#barChakraA {
+  display: none;
+  -webkit-appearance: none;
+}
+
+#barChakraA::-webkit-progress-value {
+  background-color: #00e5ff;
+  border-radius: 2px;
+}
+
+#barlifeJ {
+  -webkit-appearance: none;
+}
+
+#barlifeJ::-webkit-progress-value {
+  background-color: #00e676;
+  border-radius: 2px;
+}
+
+#barChakraJ {
+  -webkit-appearance: none;
+}
+
+#barChakraJ::-webkit-progress-value {
+  background-color: #00e5ff;
+  border-radius: 2px;
+}
+
+#chakra_joueur {
+  color: white;
+}
+
+#vie_joueur {
+  color: white;
+}
+#img_adversaire{
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: 0;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+#imageJoueur{
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: 0;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+body{  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: 0;
+
+}
+
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+#textVie{
+  display: none
+}
+
+#textChakra{
+  display: none
+}
